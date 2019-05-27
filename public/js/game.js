@@ -274,7 +274,7 @@ function test(physics, barra){
 
       Client.sendBall(bal);
 
-    } else (distancia > 50){
+    } else if (distancia > 50){
       ball_lauched = false;
     }
 
