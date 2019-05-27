@@ -21,9 +21,10 @@ server.listen(process.env.PORT || 8081,function(){
     console.log('Listening on '+server.address().port);
 });
 
-if(clientsCount <2){
+
   io.on('connection',function(socket){
 
+   if(clientsCount <2){
       socket.on('newplayer',function(){
 
       socket.player = {
@@ -66,8 +67,10 @@ if(clientsCount <2){
     socket.on('test',function(){
         console.log('test received');
     });
+
+  }
 });
-}
+
 
 function getAllPlayers(){
     var players = [];
