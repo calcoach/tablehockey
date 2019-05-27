@@ -151,7 +151,7 @@ Game.movePlayer = function(id,x,y){
 
 Game.moveBall = function(bal){
 
-console.log(bal);
+console.log(bal.ball_lauched);
 
    Game.ball.x = bal.balX;
    Game.ball.y = bal.balY;
