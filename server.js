@@ -18,11 +18,7 @@ server.listen(process.env.PORT || 8081,function(){
 
 io.on('connection',function(socket){
 
-    if(clientsCount <2){
 
-      app.get('/',function(req,res){
-          res.sendFile(__dirname+'/index.html');
-      });
       socket.on('newplayer',function(){
 
       socket.player = {
@@ -62,7 +58,18 @@ io.on('connection',function(socket){
         });
     });
 
-  }//End
+    if(clientsCount <2){
+
+      app.get('/',function(req,res){
+          res.sendFile(__dirname+'/index.html');
+      });
+
+    } else{
+      app.get('/',function(req,res){
+          res.sendFile(__dirname+'/index0.html');
+      });
+
+    }
 
     socket.on('test',function(){
         console.log('test received');
