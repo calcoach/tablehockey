@@ -67,12 +67,11 @@ function create() {
   message = this.add.text(800,32);
 
   times.setText('Tiempo');
-  score1 = this.add.text(250, 32,{
-    font: 'Agency FB',
-    fontSize: 40,
-    fill: 'purple'
-  });
+  score1 = this.add.text(250, 32);
   score1.setText('0');
+  score1.font = "Agency FB";
+  score1.fontSize = 100;
+  score1.fill = "green";
 
 
 
