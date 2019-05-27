@@ -214,7 +214,6 @@ function update() {
 
     try{
 
-      if(Game.playerMap[ids[x]].body!==null){
         test(this.physics,Game.playerMap[ids[x]]);
 
          //physics.world.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
@@ -231,10 +230,7 @@ function update() {
            }
 
            Client.sendBall(bal);
-
          }
-
-      }
 
       } catch(e){
        console.log(e);
@@ -258,6 +254,7 @@ function test(physics, barra){
   point1 = Game.ball.x - barra.x;
   point2 = Game.ball.y - barra.y;
   distancia = Math.sqrt(Math.pow(point1,2)+math.pow(point2,2));
+  consolo.log(distancia)
   if(distancia <= 50.0 & ball_lauched==false){
 
       var x = barra.x;
