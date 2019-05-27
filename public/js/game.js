@@ -44,7 +44,7 @@ var physics;
 
 function preload() {
   this.load.image('pared', 'assets/mesa.png');
-  this.load.image('barra', 'assets/barra.png');
+  this.load.image('barra', 'assets/ficha.png');
 
 
 }
