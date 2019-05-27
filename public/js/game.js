@@ -67,7 +67,7 @@ function create() {
   message = this.add.text(800,32);
 
   times.setText('Tiempo');
-  score1 = this.add.text(250, 32, ,{
+  score1 = this.add.text(250, 32,{
     font: 'NombreDeLaFuente',
     fontSize: 40,
     fill: 'purple'
