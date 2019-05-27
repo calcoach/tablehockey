@@ -254,7 +254,7 @@ function test(physics, barra){
   point1 = Game.ball.x - barra.x;
   point2 = Game.ball.y - barra.y;
   distancia = Math.sqrt(Math.pow(point1,2)+math.pow(point2,2));
-  consolo.log(distancia)
+  console.log(distancia)
   if(distancia <= 50.0 & ball_lauched==false){
 
       var x = barra.x;
