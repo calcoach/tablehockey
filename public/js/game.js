@@ -130,7 +130,7 @@ Game.addNewPlayer = function(id,x,y){
   Game.playerMap[id].setCollideWorldBounds(true);
   Game.playerMap[id].body.bounce.setTo(1,1);
   Game.playerMap[id].enableBody = true;
-  Game.playerMap[id].body.setCircle(15, 10, 10);
+  //Game.playerMap[id].body.setCircle(15, 10, 10);
 
   barra2 = Game.playerMap[id];
   ids.push(id);
