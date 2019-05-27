@@ -44,9 +44,10 @@ io.on('connection',function(socket){
 
       socket.broadcast.emit('newplayer',socket.player);
       clientsCount++;
+      socket.emit('allplayers',getAllPlayers());
       }
 
-        socket.emit('allplayers',getAllPlayers());
+
 
 
         socket.on('click',function(data){
