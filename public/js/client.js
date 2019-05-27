@@ -38,7 +38,7 @@ Client.socket.on('allplayers',function(data){
 
     Client.socket.on('moveball', function(data){
         Game.moveBall(data);
-        console.log(data);
+        
     });
 
     Client.socket.on('remove',function(id){
