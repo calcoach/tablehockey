@@ -8,16 +8,21 @@ app.use('/js',express.static(__dirname + '/js'));
 app.use('/assets',express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/public'));
 
+app.get('/',function(req,res){
+      res.sendFile(__dirname+'/index.html');
+  });
+
 server.lastPlayderID = 0;
 clientsCount = 0;
+
 
 
 server.listen(process.env.PORT || 8081,function(){
     console.log('Listening on '+server.address().port);
 });
 
-io.on('connection',function(socket){
-
+if(clientsCount <2){
+  io.on('connection',function(socket){
 
       socket.on('newplayer',function(){
 
@@ -58,23 +63,11 @@ io.on('connection',function(socket){
         });
     });
 
-    if(clientsCount <2){
-
-      app.get('/',function(req,res){
-          res.sendFile(__dirname+'/index.html');
-      });
-
-    } else{
-      app.get('/',function(req,res){
-          res.sendFile(__dirname+'/index0.html');
-      });
-
-    }
-
     socket.on('test',function(){
         console.log('test received');
     });
 });
+}
 
 function getAllPlayers(){
     var players = [];
