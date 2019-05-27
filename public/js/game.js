@@ -54,8 +54,8 @@ function create() {
   physics = this.physics;
   scene = this;
 
-  var pared = this.add.image(500, 300, 'pared');
-  this.physics.world.setBounds(350, 50, 396, 510)
+  var pared = this.add.image(530, 300, 'pared');
+  this.physics.world.setBounds(380, 50, 39  6, 510)
   ball_lauched = false;
   ball_velocity = 250;
 
