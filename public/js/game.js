@@ -68,7 +68,7 @@ function create() {
 
   times.setText('Tiempo');
   score1 = this.add.text(250, 32,{
-    font: 'NombreDeLaFuente',
+    font: 'Agency FB',
     fontSize: 40,
     fill: 'purple'
   });
