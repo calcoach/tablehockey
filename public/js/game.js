@@ -220,22 +220,22 @@ function update() {
          //physics.world.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
          //console.log(Game.playerMap[ids[x].collider);
          console.log(Game.ball.body.onCollide);
-         if(Game.ball.body.checkWorldBounds()){
-           var bal = {
+         //if(Game.ball.body.checkWorldBounds()){
+           //var bal = {
 
-             balX: Game.ball.x,
-             balY: Game.ball.y,
-             balVelocityX: Game.ball.body.velocity.x,
-             balVelocityY: Game.ball.body.velocity.y,
-             ball_lauched: ball_lauched
-           }
+             //balX: Game.ball.x,
+             //balY: Game.ball.y,
+             //balVelocityX: Game.ball.body.velocity.x,
+             //balVelocityY: Game.ball.body.velocity.y,
+             //ball_lauched: ball_lauched
+           //}
 
-           Client.sendBall(bal);
-         }
+           //Client.sendBall(bal);
+         //}
 
-      } catch(e){
-       console.log(e);
-     }
+    //  } catch(e){
+       //console.log(e);
+     //}
 
  }
 
