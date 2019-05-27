@@ -81,7 +81,7 @@ function create() {
   score1.setFill("green");
   score1.setText('0');
 
-  score2 = this.add.text(150, 500);
+  score2 = this.add.text(150, 450);
   score2.font = "Agency FB";
   score2.setFontSize(90);
   score2.setFill("green");
