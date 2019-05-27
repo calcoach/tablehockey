@@ -191,7 +191,7 @@ function update() {
 
       if(Game.playerMap[ids[x]].body!==null){
         test(this.physics,Game.playerMap[ids[x]]);
-        console.log(Game.ball.body.checkWorldBounds());
+        console.log(Game.ball.body.checkCollision);
          if(Game.ball.body.checkWorldBounds()){
            var bal = {
 
