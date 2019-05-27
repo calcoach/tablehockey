@@ -53,7 +53,7 @@ io.on('connection',function(socket){
             socket.ball = data;
             io.emit('moveball',data);
         });
-} //end newplayer
+
 
         socket.on('disconnect',function(){
             io.emit('remove',socket.player.id);
@@ -61,7 +61,7 @@ io.on('connection',function(socket){
         });
     });
 
-
+  }//End 
 
     socket.on('test',function(){
         console.log('test received');
