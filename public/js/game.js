@@ -45,6 +45,7 @@ var physics;
 function preload() {
   this.load.image('pared', 'assets/mesa.png');
   this.load.image('barra', 'assets/ficha.png');
+  this.load.image('ball', 'assets/ball.png');
 
 
 }
@@ -59,7 +60,7 @@ function create() {
   ball_lauched = false;
   ball_velocity = 250;
 
-  Game.ball = createBall(400, 300, 'barra', this.physics, this);
+  Game.ball = createBall(400, 300, 'ball', this.physics, this);
 
   //this.input.onDown.add(launch_Ball, this);
 
