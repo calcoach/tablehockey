@@ -216,9 +216,9 @@ function update() {
       if(Game.playerMap[ids[x]].body!==null){
         test(this.physics,Game.playerMap[ids[x]]);
 
-         physics.arcade.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
-
-        console.log(Game.ball.body.onCollide);
+         physics.world.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
+         //console.log(Game.playerMap[ids[x].collider);
+         console.log(Game.ball.body.onCollide);
          if(Game.ball.body.checkWorldBounds()){
            var bal = {
 
@@ -231,11 +231,12 @@ function update() {
            Client.sendBall(bal);
 
          }
+
       }
 
       } catch(e){
-
-   }
+       console.log(e);
+     }
 
  }
 
