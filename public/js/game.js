@@ -233,9 +233,9 @@ function update() {
            //Client.sendBall(bal);
          //}
 
-    //  } catch(e){
-       //console.log(e);
-     //}
+      } catch(e){
+       console.log(e);
+     }
 
  }
 
