@@ -272,6 +272,7 @@ function test(physics, barra){
         balVelocityY: Game.ball.body.velocity.y,
         ball_lauched: true
       }
+      ball_lauched: true;
 
       Client.sendBall(bal);
 
