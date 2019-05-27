@@ -67,9 +67,13 @@ function create() {
   message = this.add.text(800,32);
 
   times.setText('Tiempo');
-  score1 = this.add.text(250, 32);
+  score1 = this.add.text(250, 32, ,{
+    font: 'NombreDeLaFuente',
+    fontSize: 40,
+    fill: 'purple'
+  });
   score1.setText('0');
-  score1.setSize(100,100);
+
 
 
   timedEvent = this.time.delayedCall(20000, fadePicture, [], this);
