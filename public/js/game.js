@@ -215,6 +215,9 @@ function update() {
 
       if(Game.playerMap[ids[x]].body!==null){
         test(this.physics,Game.playerMap[ids[x]]);
+
+         physics.arcade.collide(playerMap[ids[x], Game.ball, test2(), null, this);
+
         console.log(Game.ball.body.onCollide);
          if(Game.ball.body.checkWorldBounds()){
            var bal = {
@@ -236,6 +239,10 @@ function update() {
 
  }
 
+}
+
+function test2(){
+  console.log(jujuju);
 }
 
 function test(physics, barra){
