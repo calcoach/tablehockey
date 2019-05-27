@@ -24,6 +24,7 @@ var Game = new Phaser.Game(config);
 //var scene = game.scene;
 Game.playerMap = {};
 var ids  = [];
+var score;
 var score1;
 var score2;
 var cont = 0;
@@ -67,12 +68,24 @@ function create() {
   message = this.add.text(800,32);
 
   times.setText('Tiempo');
-  score1 = this.add.text(250, 32);
 
+  score = this.add.text(550, 12);
+  score.font = "Agency FB";
+  score.setFontSize(50);
+  score.setFill("green");
+  score.setText('0');
+
+  score1 = this.add.text(250, 52);
   score1.font = "Agency FB";
-  score1.setFontSize(100);
+  score1.setFontSize(90);
   score1.setFill("green");
   score1.setText('0');
+
+  score2 = this.add.text(250, 500);
+  score2.font = "Agency FB";
+  score2.setFontSize(90);
+  score2.setFill("green");
+  score2.setText('0');
 
 
 
