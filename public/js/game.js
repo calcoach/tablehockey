@@ -69,11 +69,11 @@ function create() {
 
   times.setText('Tiempo');
 
-  score = this.add.text(550, 12);
+  score = this.add.text(250, 12);
   score.font = "Agency FB";
   score.setFontSize(50);
   score.setFill("green");
-  score.setText('0');
+  score.setText('SCORE:');
 
   score1 = this.add.text(250, 52);
   score1.font = "Agency FB";
