@@ -7,9 +7,7 @@ app.use('/css',express.static(__dirname + '/css'));
 app.use('/js',express.static(__dirname + '/js'));
 app.use('/assets',express.static(__dirname + '/assets'));
 app.use(express.static(__dirname + '/public'));
-app.get('/',function(req,res){
-    res.sendFile(__dirname+'/index.html');
-});
+
 server.lastPlayderID = 0;
 clientsCount = 0;
 
@@ -22,6 +20,9 @@ io.on('connection',function(socket){
 
     if(clientsCount <2){
 
+      app.get('/',function(req,res){
+          res.sendFile(__dirname+'/index.html');
+      });
       socket.on('newplayer',function(){
 
       socket.player = {
@@ -61,7 +62,7 @@ io.on('connection',function(socket){
         });
     });
 
-  }//End 
+  }//End
 
     socket.on('test',function(){
         console.log('test received');
