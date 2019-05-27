@@ -182,8 +182,8 @@ Game.launch_Ball = function(){
 
   if(ball_lauched){
 
-    ball.x = physics.world.centerX;
-    ball.y = physics.world.centerY;
+    ball.x = 0;
+    ball.y = 0;
     ball.body.velocity.setTo(0,0);
     ball_lauched = false;
     console.log('jaja');
@@ -216,7 +216,7 @@ function update() {
       if(Game.playerMap[ids[x]].body!==null){
         test(this.physics,Game.playerMap[ids[x]]);
 
-         physics.world.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
+         //physics.world.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
          //console.log(Game.playerMap[ids[x].collider);
          console.log(Game.ball.body.onCollide);
          if(Game.ball.body.checkWorldBounds()){
@@ -256,7 +256,7 @@ function test(physics, barra){
   point1 = Game.ball.x - barra.x;
   point2 = Game.ball.y - barra.y;
   distancia = Math.sqrt(Math.pow(point1,2)+math.pow(point2,2));
-  if(distancia < 50.0 ){
+  if(distancia <= 50.0 & ball_lauched==false){
 
       var x = barra.x;
       var y = barra.y;
@@ -274,6 +274,8 @@ function test(physics, barra){
 
       Client.sendBall(bal);
 
+    } else (distancia > 50){
+      ball_lauched = false;
     }
 
     } catch (e){
