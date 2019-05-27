@@ -157,6 +157,7 @@ console.log(bal);
    Game.ball.y = bal.balY;
    Game.ball.body.velocity.x = bal.balVelocityX;
    Game.ball.body.velocity.y = bal.balVelocityY;
+   ball_lauched = bal.ball_lauched;
 
 
 }
@@ -225,7 +226,8 @@ function update() {
              balX: Game.ball.x,
              balY: Game.ball.y,
              balVelocityX: Game.ball.body.velocity.x,
-             balVelocityY: Game.ball.body.velocity.y
+             balVelocityY: Game.ball.body.velocity.y,
+             ball_lauched: ball_lauched
            }
 
            Client.sendBall(bal);
@@ -269,10 +271,12 @@ function test(physics, barra){
         balX: Game.ball.x,
         balY: Game.ball.y,
         balVelocityX: Game.ball.body.velocity.x,
-        balVelocityY: Game.ball.body.velocity.y
+        balVelocityY: Game.ball.body.velocity.y,
+        ball_lauched: true
       }
 
       Client.sendBall(bal);
+
 
     } else if (distancia > 50){
       ball_lauched = false;
