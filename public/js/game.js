@@ -70,8 +70,8 @@ function create() {
   score1 = this.add.text(250, 32);
 
   score1.font = "Agency FB";
-  score1.fontSize = 100;
-  score1.fill = "green";
+  score1.setFontSize(100);
+  score1.setFill("green");
   score1.setText('0');
 
 
