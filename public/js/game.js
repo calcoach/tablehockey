@@ -243,7 +243,7 @@ function update() {
 }
 
 function test2(){
-  console.log(jujuju);
+  console.log('jujuju');
 }
 
 function test(physics, barra){
