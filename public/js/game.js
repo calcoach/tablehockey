@@ -24,6 +24,8 @@ var Game = new Phaser.Game(config);
 //var scene = game.scene;
 Game.playerMap = {};
 var ids  = [];
+var score1;
+var score2;
 var cont = 0;
 var cursor;
 var times;
@@ -65,8 +67,12 @@ function create() {
   message = this.add.text(800,32);
 
   times.setText('Tiempo');
+  score1 = this.add.text(500, 32);
+  score1.setText('0');
+
 
   timedEvent = this.time.delayedCall(20000, fadePicture, [], this);
+
 
   this.input.on('drag', function(pointer, gameObject, dragX, dragY) {
 
