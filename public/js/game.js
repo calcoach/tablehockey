@@ -88,10 +88,10 @@ function create() {
   timedEvent = this.time.delayedCall(20000, fadePicture, [], this);
   //test2();
    //xm = physics.add.sprite(617, 550, 'medida').setInteractive();
-  //scene.input.setDraggable(xm);
-  //x.setCollideWorldBounds(true);
+   //scene.input.setDraggable(xm);
+   //xm.setCollideWorldBounds(true);
   //xm.body.bounce.setTo(1,1);
-  //xm.enableBody = true;
+//  xm.enableBody = true;
 
   this.input.on('drag', function(pointer, gameObject, dragX, dragY) {
 
@@ -208,6 +208,7 @@ function update() {
 
          //physics.world.collide(Game.playerMap[ids[x]], Game.ball, test2(), null, scene);
         Match.checkAnotation(score1, score2, scene);
+        console.log(xm.x+' '+xm.y);
 
       } catch(e){
        console.log(e);
