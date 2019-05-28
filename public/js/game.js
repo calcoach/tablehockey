@@ -256,10 +256,7 @@ function test(physics, barra){
   point2 = Game.ball.y - barra.y;
   distancia = Math.sqrt(Math.pow(point1,2)+math.pow(point2,2));
   console.log(distancia)
-  if(distancia <= 30.0 & ball_lauched==false){
-
-      var x = barra.x;
-      var y = barra.y;
+  if(distancia <= 30.0  ){
 
       Game.ball.body.velocity.x = 250;
       Game.ball.body.velocity.y = -250;
@@ -277,7 +274,7 @@ function test(physics, barra){
       Client.sendBall(bal);
 
 
-    } else if (distancia > 50){
+    } else if (distancia > 30){
       ball_lauched = false;
     }
 
